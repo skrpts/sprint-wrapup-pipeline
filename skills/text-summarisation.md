@@ -5,7 +5,7 @@ title: Text Summarisation
 description: "Condenses long-form text into key points"
 tags: [Tested]
 connections:
-  - target: anthropic-claude
+  - target: llm-service
     type: runs_on
 ---
 

@@ -5,7 +5,7 @@ title: Action Item Extraction
 description: "Scans text for actionable commitments and structures them as tasks"
 tags: [Tested]
 connections:
-  - target: anthropic-claude
+  - target: llm-service
     type: runs_on
 ---
 
