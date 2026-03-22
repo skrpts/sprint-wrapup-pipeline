@@ -2,7 +2,7 @@
 name: "sprint-wrapup-pipeline"
 display_name: "Sprint Wrapup Pipeline"
 description: "Summarises sprint retrospective notes and extracts action items for the next sprint"
-version: "1.0.0"
+version: "1.2.0"
 engine: ">=1.0.0"
 
 # --- Attribution ---

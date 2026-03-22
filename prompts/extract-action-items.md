@@ -15,4 +15,8 @@ Extracts actionable commitments from unstructured text and formats them as a str
 
 ## Prompt
 
-Analyse the following text and extract all action items. For each, identify: the task, who is responsible, and any deadline mentioned.
+Analyse the following sprint retrospective notes and extract all action items. For each, identify: the task, who is responsible, and any deadline mentioned.
+
+## Sprint Retrospective Notes
+
+Use the retro notes summarised in Stage 1 as the basis for extracting action items.

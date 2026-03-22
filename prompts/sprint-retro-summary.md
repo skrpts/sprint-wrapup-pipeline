@@ -17,4 +17,16 @@ Converts raw sprint retrospective notes into a structured summary with clear cat
 
 ## Prompt
 
-Take these sprint retrospective notes and produce: what went well, what needs improvement, action items for next sprint.
+Take the following sprint retrospective analysis and produce a structured summary: what went well, what needs improvement, and action items for next sprint.
+
+## Sprint
+
+{{input.sprint_number}}
+
+## Summary from Stage 1
+
+[The summary of retro notes from Stage 1]
+
+## Action Items from Stage 2
+
+[The extracted action items from Stage 2]

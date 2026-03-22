@@ -43,7 +43,8 @@ A structured retrospective summary containing:
 
 | Name | Required | Description | Example |
 |------|----------|-------------|---------|
-| `{{input.brief}}` | Yes | Primary workflow brief or source content | `Paste a short brief describing the goal, audience, and constraints.` |
+| `{{input.retro_notes}}` | Yes | Raw sprint retrospective notes — what the team discussed, feedback, observations | "Went well: mobile release shipped on time, good cross-team collaboration on auth. Needs improvement: too many context switches, standups running long. Actions discussed: limit WIP to 3, shorten standup to 10 min." |
+| `{{input.sprint_number}}` | No | The sprint number or identifier for this retrospective | "Sprint 14" or "March 2026 sprint" |
 
 ## Outputs
 
@@ -70,6 +71,13 @@ Before running this workflow:
 To test this workflow immediately after import:
 
 ```
-Brief: "Paste a short brief describing the goal, audience, and constraints."
+Retro Notes: "Went well: mobile release shipped on time, good cross-team collaboration
+on auth rewrite, new QA process caught 3 critical bugs before release.
+Needs improvement: too many context switches between projects, standups running 20+ minutes,
+deployment pipeline broke twice this sprint.
+Actions discussed: limit WIP to 3 items per person, shorten standup to 10 minutes,
+add deployment smoke tests."
+
+Sprint Number: "Sprint 14"
 ```
 

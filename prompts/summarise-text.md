@@ -15,4 +15,8 @@ General-purpose summarisation prompt that captures key points, decisions, and ac
 
 ## Prompt
 
-You are an expert summariser. Given the following text, produce a concise summary capturing the key points, decisions, and action items.
+You are an expert summariser. Given the following sprint retrospective notes, produce a concise summary capturing the key points, decisions, and action items.
+
+## Sprint Retrospective Notes
+
+{{input.retro_notes}}
