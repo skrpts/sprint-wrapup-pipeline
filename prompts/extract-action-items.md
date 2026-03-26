@@ -19,4 +19,4 @@ Analyse the following sprint retrospective notes and extract all action items. F
 
 ## Sprint Retrospective Notes
 
-Use the retro notes summarised in Stage 1 as the basis for extracting action items.
+{{steps.summarise-text.output}}
