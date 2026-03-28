@@ -7,6 +7,8 @@ tags: [Tested]
 connections:
   - target: llm-service
     type: runs_on
+  - target: documentation-standards
+    type: references
 ---
 
 ## Capability

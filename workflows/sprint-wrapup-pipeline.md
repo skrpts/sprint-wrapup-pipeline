@@ -13,6 +13,8 @@ connections:
     type: uses
   - target: markdown-formatting
     type: uses
+  - target: llm-service
+    type: runs_on
 ---
 
 ## Overview
