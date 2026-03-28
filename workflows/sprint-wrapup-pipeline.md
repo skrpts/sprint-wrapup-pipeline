@@ -11,6 +11,8 @@ connections:
     type: uses
   - target: sprint-retro-summary
     type: uses
+  - target: markdown-formatting
+    type: uses
 ---
 
 ## Overview
