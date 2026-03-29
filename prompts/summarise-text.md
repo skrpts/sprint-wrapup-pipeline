@@ -3,7 +3,7 @@ type: prompt
 id: summarise-text
 title: Summarise Text
 description: "Core prompt for condensing text into concise summaries"
-tags: [Production, planning:sprint, communication:status]
+tags: [Production, Agile, Metrics]
 connections:
   - target: text-summarisation
     type: derived_from

@@ -3,7 +3,7 @@ type: workflow
 id: sprint-wrapup-pipeline
 title: Sprint Wrapup Pipeline
 description: "Summarises sprint retrospective and extracts action items for the next sprint"
-tags: [Production, planning:sprint, communication:team]
+tags: [Production, Agile, Metrics]
 connections:
   - target: text-summarisation
     type: uses

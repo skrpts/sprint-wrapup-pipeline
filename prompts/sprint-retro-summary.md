@@ -3,7 +3,7 @@ type: prompt
 id: sprint-retro-summary
 title: Sprint Retro Summary
 description: "Task prompt for structuring sprint retrospective notes into actionable categories"
-tags: [Production, planning:sprint, communication:team]
+tags: [Production, Agile, Metrics]
 connections:
   - target: text-summarisation
     type: derived_from
