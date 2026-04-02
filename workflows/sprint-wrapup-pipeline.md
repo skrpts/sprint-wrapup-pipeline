@@ -15,6 +15,14 @@ connections:
     type: uses
   - target: llm-service
     type: runs_on
+  - target: progress-tracking
+    type: uses
+  - target: structured-data-extraction
+    type: uses
+  - target: extract-action-items
+    type: uses
+  - target: summarise-text
+    type: uses
 ---
 
 ## Overview
