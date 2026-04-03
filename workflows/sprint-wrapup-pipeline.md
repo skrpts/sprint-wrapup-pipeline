@@ -11,8 +11,6 @@ connections:
     type: uses
   - target: sprint-retro-summary
     type: uses
-  - target: markdown-formatting
-    type: uses
   - target: llm-service
     type: runs_on
   - target: progress-tracking
@@ -22,6 +20,8 @@ connections:
   - target: extract-action-items
     type: uses
   - target: summarise-text
+    type: uses
+  - target: format-conversion
     type: uses
 ---
 
