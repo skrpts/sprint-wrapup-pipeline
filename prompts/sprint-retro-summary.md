@@ -25,8 +25,8 @@ Take the following sprint retrospective analysis and produce a structured summar
 
 ## Summary from Stage 1
 
-{{steps.summarise-text.output}}
+{{steps.Text Summarisation.output}}
 
 ## Action Items from Stage 2
 
-{{steps.extract-action-items.output}}
+{{steps.Action Item Extraction.output}}
