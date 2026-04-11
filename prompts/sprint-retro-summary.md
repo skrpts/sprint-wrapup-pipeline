@@ -4,6 +4,13 @@ id: sprint-retro-summary
 title: Sprint Retro Summary
 description: "Task prompt for structuring sprint retrospective notes into actionable categories"
 tags: [Production, Agile, Metrics]
+inputs:
+  sprint_number:
+    label: "Sprint Number"
+    description: "The sprint number"
+    example: "14"
+    required: true
+    type: text
 connections:
   - target: text-summarisation
     type: derived_from
