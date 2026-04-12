@@ -17,6 +17,21 @@ connections:
     type: uses
   - target: format-conversion
     type: uses
+execution:
+  - skill: "text-summarisation"
+    step_type: "synthesis"
+  - skill: "action-item-extraction"
+    step_type: "synthesis"
+    input_from: "text-summarisation"
+  - skill: "progress-tracking"
+    step_type: "synthesis"
+    input_from: "action-item-extraction"
+  - skill: "structured-data-extraction"
+    step_type: "synthesis"
+    input_from: "progress-tracking"
+  - skill: "format-conversion"
+    step_type: "content"
+    input_from: "structured-data-extraction"
 ---
 
 ## Overview
