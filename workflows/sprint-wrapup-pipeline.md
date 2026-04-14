@@ -17,6 +17,13 @@ connections:
     type: uses
   - target: format-conversion
     type: uses
+output_step: "progress-tracking"
+composite_steps:
+  - "text-summarisation"
+  - "action-item-extraction"
+  - "progress-tracking"
+  - "structured-data-extraction"
+  - "format-conversion"
 execution:
   - skill: "text-summarisation"
     step_type: "synthesis"

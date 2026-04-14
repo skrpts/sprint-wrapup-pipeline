@@ -3,7 +3,7 @@ id: "b3150069-8c34-448c-90b3-0f56bfa39d4f"
 name: "sprint-wrapup-pipeline"
 display_name: "Sprint Wrapup Pipeline"
 description: "Summarises sprint retrospective notes and extracts action items for the next sprint"
-version: "1.1.9"
+version: "1.1.10"
 engine: ">=1.0.0"
 
 # --- Attribution ---
@@ -27,15 +27,6 @@ requires:
     - "llm-service"
   permissions: []
   data_handling: []
-
-# --- Output ---
-output_step: "progress-tracking"
-composite_steps:
-  - "text-summarisation"
-  - "action-item-extraction"
-  - "progress-tracking"
-  - "structured-data-extraction"
-  - "format-conversion"
 
 # --- Contents ---
 contents:
