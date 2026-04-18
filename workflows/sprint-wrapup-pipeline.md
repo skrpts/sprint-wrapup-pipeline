@@ -17,7 +17,9 @@ connections:
     type: uses
   - target: format-conversion
     type: uses
-output_step: "progress-tracking"
+  - target: language-polish
+    type: uses
+output_step: "language-polish"
 composite_steps:
   - "text-summarisation"
   - "action-item-extraction"
@@ -27,6 +29,7 @@ composite_steps:
 execution:
   - skill: "text-summarisation"
     step_type: "synthesis"
+    prompt: "summarise-text"
   - skill: "action-item-extraction"
     step_type: "synthesis"
   - skill: "progress-tracking"
@@ -36,6 +39,8 @@ execution:
     context:
       extraction_fields: ""
   - skill: "format-conversion"
+    step_type: "content"
+  - skill: "language-polish"
     step_type: "content"
 ---
 
