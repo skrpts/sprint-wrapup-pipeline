@@ -29,7 +29,7 @@ composite_steps:
 execution:
   - skill: "text-summarisation"
     step_type: "synthesis"
-    prompt: "summarise-text"
+    prompt: "sprint-retro-brief"
   - skill: "action-item-extraction"
     step_type: "synthesis"
   - skill: "progress-tracking"
