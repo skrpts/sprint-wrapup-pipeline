@@ -31,16 +31,20 @@ execution:
     step_type: "synthesis"
     prompt: "sprint-retro-brief"
   - skill: "action-item-extraction"
+    prompt: "extract-action-items"
     step_type: "synthesis"
   - skill: "progress-tracking"
+    prompt: "track-progress"
     step_type: "synthesis"
   - skill: "structured-data-extraction"
+    prompt: "extract-structured-data"
     step_type: "synthesis"
     context:
       extraction_fields: ""
   - skill: "format-conversion"
     step_type: "content"
   - skill: "language-polish"
+    prompt: "polish-language"
     step_type: "content"
 ---
 
