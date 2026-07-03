@@ -30,19 +30,24 @@ execution:
   - skill: "text-summarisation"
     step_type: "synthesis"
     prompt: "sprint-retro-brief"
+    output: { name: "retro_brief", type: "text" }
   - skill: "action-item-extraction"
     prompt: "extract-action-items"
     step_type: "synthesis"
+    output: { name: "action_items", type: "list" }
   - skill: "progress-tracking"
     prompt: "track-progress"
     step_type: "synthesis"
+    output: { name: "progress", type: "text" }
   - skill: "structured-data-extraction"
     prompt: "extract-structured-data"
     step_type: "synthesis"
+    output: { name: "structured_data", type: "json" }
     context:
       extraction_fields: "Key findings, dates, names, action items"
   - skill: "format-conversion"
     step_type: "local.transform"
+    output: { name: "formatted_report", type: "text" }
   - skill: "language-polish"
     prompt: "polish-language"
     step_type: "content"
