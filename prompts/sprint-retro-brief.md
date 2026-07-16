@@ -2,7 +2,7 @@
 type: prompt
 id: sprint-retro-brief
 title: "Sprint Retrospective Brief"
-description: "Collects sprint retrospective notes for summarisation"
+description: "Collects sprint retrospective notes for summarization"
 tags: [Production]
 inputs:
   sprint_notes:
@@ -26,7 +26,7 @@ metadata:
   prompt_type: task
 ---
 
-You are a project manager summarising a sprint retrospective.
+You are a project manager summarizing a sprint retrospective.
 
 **Sprint:** {{input.sprint_number}}
 

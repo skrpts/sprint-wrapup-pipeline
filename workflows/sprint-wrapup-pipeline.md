@@ -2,7 +2,7 @@
 type: workflow
 id: sprint-wrapup-pipeline
 title: Sprint Wrapup Pipeline
-description: "Summarises sprint retrospective and extracts action items for the next sprint"
+description: "Summarizes sprint retrospective and extracts action items for the next sprint"
 tags: [Production, Agile, Metrics]
 connections:
   - target: text-summarisation
@@ -58,11 +58,11 @@ execution:
 
 ## Overview
 
-This workflow processes sprint retrospective notes through summarisation and action item extraction, then produces a structured retro summary ready for the team.
+This workflow processes sprint retrospective notes through summarization and action item extraction, then produces a structured retro summary ready for the team.
 
 ## Pipeline Stages
 
-### Stage 1: Summarise Retro Notes
+### Stage 1: Summarize Retro Notes
 
 Invoke the **text-summarisation** skill against the raw retrospective notes to distil key themes and discussion points.
 
@@ -72,7 +72,7 @@ Invoke the **action-item-extraction** skill to capture all improvement actions a
 
 ### Stage 3: Format Retro Summary
 
-Invoke the **sprint-retro-summary** prompt to combine outputs into a structured summary with clear sections for what went well, what needs improvement, and prioritised action items.
+Invoke the **sprint-retro-summary** prompt to combine outputs into a structured summary with clear sections for what went well, what needs improvement, and prioritized action items.
 
 ## Output
 
@@ -100,7 +100,7 @@ A structured retrospective summary containing:
 Before running this workflow:
 
 1. No external services required — paste your content directly and provide any supporting context as inputs or source nodes.
-2. Review the included documents, assets, or source nodes and customise them to match your team, brand, or domain conventions where needed.
+2. Review the included documents, assets, or source nodes and customize them to match your team, brand, or domain conventions where needed.
 3. No specific AI provider or API key is required beyond your configured skrptiq LLM provider.
 
 ## Provider Notes
