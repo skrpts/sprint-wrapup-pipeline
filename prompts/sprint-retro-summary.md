@@ -11,10 +11,26 @@ inputs:
     example: "14"
     required: true
     type: text
+context_params:
+  retro_brief:
+    label: "Retro Brief"
+    description: "The summarised retrospective brief from the earlier summarisation stage."
+    required: false
+    default_from_previous: true
+  action_items:
+    label: "Action Items"
+    description: "The action items extracted from the retrospective."
+    required: false
+  progress:
+    label: "Tracked Progress"
+    description: "The tracked sprint progress from the progress-tracking stage."
+    required: false
 connections:
   - target: text-summarisation
     type: derived_from
   - target: action-item-extraction
+    type: derived_from
+  - target: progress-tracking
     type: derived_from
 ---
 
@@ -30,10 +46,14 @@ Take the following sprint retrospective analysis and produce a structured summar
 
 {{input.sprint_number}}
 
-## Summary from Stage 1
+## Retrospective Brief
 
-{{steps.previous.output}}
+{{step.context.retro_brief}}
 
-## Action Items from Stage 2
+## Action Items
 
-{{steps.Action Item Extraction.output}}
+{{step.context.action_items}}
+
+## Tracked Progress
+
+{{step.context.progress}}

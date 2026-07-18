@@ -1,5 +1,8 @@
 # Release Notes
 
+## v1.1.28
+GH#863 Wave 1 (K-045 intent/output mismatch) — the `sprint-retro-summary` deliverable prompt was declared but never invoked by any execution step, so the retro summary artefact was never produced. Wire it in as the terminal content step via a new backing skill `sprint-retro-summariser` (title "Sprint Retro Summary Builder"), binding its inputs (retro brief, action items, tracked progress) explicitly via `from_step`. Convert the prompt's positional/title refs to `context_params` + `{{step.context.*}}`. Re-pin `polish-language` 1.0.1 → 1.0.6 and bind its `source` ← the retro-summary step so the polish stage refines the deliverable rather than the positional previous step. Contents skills 0 → 1, total 3 → 4.
+
 ## v1.1.27
 GH#845 — republish with American English (en-US) content, completing the source-only GH#805 flip that never reached the Hub. Copy only — no functional or behaviour change.
 

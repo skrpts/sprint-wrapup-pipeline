@@ -17,6 +17,8 @@ connections:
     type: uses
   - target: format-conversion
     type: uses
+  - target: sprint-retro-summariser
+    type: uses
   - target: language-polish
     type: uses
 output_step: "language-polish"
@@ -26,6 +28,7 @@ composite_steps:
   - "progress-tracking"
   - "structured-data-extraction"
   - "format-conversion"
+  - "sprint-retro-summariser"
 execution:
   - skill: "text-summarisation"
     step_type: "synthesis"
@@ -48,12 +51,30 @@ execution:
   - skill: "format-conversion"
     step_type: "local.transform"
     output: { name: "formatted_report", type: "text" }
+  - skill: "sprint-retro-summariser"
+    prompt: "sprint-retro-summary"
+    step_type: "synthesis"
+    output: { name: "retro_summary", type: "text" }
+    bindings:
+      retro_brief:
+        from_step: "Text Summarization"
+        field: output
+      action_items:
+        from_step: "Action Item Extraction"
+        field: output
+      progress:
+        from_step: "Progress Tracking"
+        field: output
   - skill: "language-polish"
     prompt: "polish-language"
     step_type: "content"
     context:
       voice_profile: "Neutral professional tone"
       grammar_strictness: "Professional"
+    bindings:
+      source:
+        from_step: "Sprint Retro Summary Builder"
+        field: output
 ---
 
 ## Overview
@@ -70,9 +91,13 @@ Invoke the **text-summarisation** skill against the raw retrospective notes to d
 
 Invoke the **action-item-extraction** skill to capture all improvement actions agreed during the retro.
 
-### Stage 3: Format Retro Summary
+### Stage 3: Build Retro Summary
 
-Invoke the **sprint-retro-summary** prompt to combine outputs into a structured summary with clear sections for what went well, what needs improvement, and prioritized action items.
+Invoke the **sprint-retro-summariser** skill with the **sprint-retro-summary** prompt to combine the retro brief, extracted action items, and tracked progress into a structured summary with clear sections for what went well, what needs improvement, and prioritized action items.
+
+### Stage 4: Polish
+
+Invoke the **language-polish** skill to refine the assembled retro summary into the final, team-ready deliverable.
 
 ## Output
 
