@@ -49,7 +49,10 @@ execution:
     context:
       extraction_fields: "Key findings, dates, names, action items"
   - skill: "format-conversion"
-    step_type: "local.transform"
+    prompt: "format-conversion"
+    step_type: "content"
+    context:
+      target_format: "markdown"
     output: { name: "formatted_report", type: "text" }
   - skill: "sprint-retro-summariser"
     prompt: "sprint-retro-summary"
@@ -113,6 +116,7 @@ A structured retrospective summary containing:
 |------|----------|-------------|---------|
 | `{{input.retro_notes}}` | Yes | Raw sprint retrospective notes — what the team discussed, feedback, observations | "Went well: mobile release shipped on time, good cross-team collaboration on auth. Needs improvement: too many context switches, standups running long. Actions discussed: limit WIP to 3, shorten standup to 10 min." |
 | `{{input.sprint_number}}` | No | The sprint number or identifier for this retrospective | "Sprint 14" or "March 2026 sprint" |
+| `{{input.sprint_notes}}` | Yes | Sprint retrospective notes or review output | `Paste sprint notes here` |
 
 ## Outputs
 

@@ -3,7 +3,7 @@ id: "b3150069-8c34-448c-90b3-0f56bfa39d4f"
 name: "sprint-wrapup-pipeline"
 display_name: "Sprint Wrapup Pipeline"
 description: "Summarizes sprint retrospective notes and extracts action items for the next sprint"
-version: "1.1.28"
+version: "1.1.30"
 engine: ">=0.1.0"
 
 # --- Attribution ---
@@ -37,8 +37,8 @@ dependencies:
     checksum: "sha256:56d6c330c86135eaef5c8ad8c50c90230b843f3075159f3869e17d4d19cc3a78"
   - id: "6fbc6b50-b4c9-465f-b208-1fc453df76b9"
     name: "format-conversion"
-    version: 1.0.3
-    checksum: "sha256:0bcd241bb62e8872f5054de7cecfd3b029efa0f20ba4003572771804df5b8d60"
+    version: 1.0.4
+    checksum: "sha256:301a2d70a849ea7c36177406c1408018ae606dbfad3898556d3b5daa1d37676d"
   - id: "3db66b8b-8758-4503-a555-5330f3f9b3d9"
     name: "language-polish"
     version: 1.0.3
@@ -91,7 +91,7 @@ contents:
 
 security:
   status: "pass"
-  scanned_at: "2026-07-18T16:46:15.147Z"
+  scanned_at: "2026-10-19T12:34:27.779Z"
   scanner_version: "3.3.0"
   syntactic: "pass"
   structural: "pass"
