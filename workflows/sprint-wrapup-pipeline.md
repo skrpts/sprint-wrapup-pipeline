@@ -38,16 +38,28 @@ execution:
     prompt: "extract-action-items"
     step_type: "synthesis"
     output: { name: "action_items", type: "list" }
+    bindings:
+      source:
+        from_step: "Text Summarization"
+        field: output
   - skill: "progress-tracking"
     prompt: "track-progress"
     step_type: "synthesis"
     output: { name: "progress", type: "text" }
+    bindings:
+      source:
+        from_step: "Action Item Extraction"
+        field: output
   - skill: "structured-data-extraction"
     prompt: "extract-structured-data"
     step_type: "synthesis"
     output: { name: "structured_data", type: "json" }
     context:
       extraction_fields: "Key findings, dates, names, action items"
+    bindings:
+      source:
+        from_step: "Progress Tracking"
+        field: output
   - skill: "format-conversion"
     prompt: "format-conversion"
     step_type: "content"

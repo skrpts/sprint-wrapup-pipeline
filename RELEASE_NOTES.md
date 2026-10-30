@@ -1,5 +1,8 @@
 # Release Notes
 
+## v1.1.31
+GH#1100 consumer wave batch 6 — declare the data flow these steps were resolving positionally. 3 binding(s) added.
+
 ## v1.1.30
 GH#1044 — document the inputs this workflow's prompts REQUIRE but its Inputs table never listed. A user supplying exactly what the table asked for was running with required parameters unsatisfied — a silent wrong run, not a documentation nicety. documented 1 input(s): sprint_notes. Every row is generated from the requiring prompt's own declared description, example and required flag — none invented. No behaviour change; documentation only.
 
