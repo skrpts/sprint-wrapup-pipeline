@@ -16,7 +16,6 @@ context_params:
     label: "Retro Brief"
     description: "The summarised retrospective brief from the earlier summarisation stage."
     required: false
-    default_from_previous: true
   action_items:
     label: "Action Items"
     description: "The action items extracted from the retrospective."
